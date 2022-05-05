@@ -12,8 +12,9 @@ function sendValue() {
         <button id='price' onclick='sendPrice()'> Ok</button>
         <script>
             function sendPrice() {
-                window.close();                
-                return window.opener.document.body.innerHTML = document.querySelector('input[name="totalPrice"]').value
+                window.close();
+                let price = document.querySelector('input[name="totalPrice"]').value
+                window.opener.document.body.innerHTML +=  'Total price: ' + price 
                 
             }
         </script>`
